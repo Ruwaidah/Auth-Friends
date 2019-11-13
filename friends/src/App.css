@@ -1,0 +1,160 @@
+* {
+  background: #222222;
+}
+
+.App {
+  text-align: center;
+  background: #222222;
+  min-height: 100vh;
+  color: white;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.form-div {
+  padding: 50px;
+  background: #222222;
+  color: white;
+}
+
+.form-div form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+  align-items: center;
+}
+
+.input input {
+  height: 40px;
+  width: 60%;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.input label {
+  width: 20%;
+  margin-right: 40px;
+}
+
+form button {
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  height: 40px;
+  margin: 0 auto;
+  background: rgb(228, 132, 98);
+}
+
+/* User page */
+
+.user-page {
+  margin: 30px;
+}
+
+.user-page .header {
+  font-size: 40px;
+  border-bottom: 1px solid rgb(228, 132, 98);
+  padding-bottom: 50px;
+}
+
+.user-page a {
+  text-decoration: none;
+  color: azure;
+  font-size: 20px;
+}
+
+.user-page a:hover {
+  color: rgb(240, 138, 98);
+}
+
+.friend-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friend-list .friend {
+  background: rgb(110, 65, 49);
+  width: 30%;
+  border: white 2px solid;
+  margin: 40px auto;
+}
+
+.friend-list .friend h1 {
+  background: rgb(110, 65, 49);
+}
+
+.friend-info {
+  background: rgb(110, 65, 49);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.friend-info h5 {
+  background: rgb(110, 65, 49);
+  width: 15%;
+  margin-right: 20px;
+  margin: 0;
+}
+
+.friend-info p {
+  background: rgb(110, 65, 49);
+  margin: 0;
+  text-align: start;
+  width: 70%;
+  font-size: 20px;
+}
+
+/* friend-page */
+
+.friend-page h1 {
+  background: rgb(110, 65, 49);
+}
+.friend-page {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgb(110, 65, 49);
+}
+
+.friend-page button {
+  font-size: 20px;
+  color: antiquewhite;
+  border: none;
+  background: rgb(110, 65, 49);
+}
+
+.friend-page button:hover {
+  color: white;
+}
