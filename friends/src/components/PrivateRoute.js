@@ -8,9 +8,6 @@ const isAuthenticated = () => {
 };
 
 function PrivateRoute({ children, ...rest }) {
-  console.log(rest);
-  console.log(sessionStorage.getItem("token"));
-  console.log("sfwwf");
   return (
     <Route
       {...rest}

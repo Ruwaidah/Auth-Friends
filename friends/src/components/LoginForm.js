@@ -10,6 +10,8 @@ function LoginForm(props) {
     password: ""
   });
 
+  if (props.isLoggedIn) props.history.push("/protected");
+
   const onChange = event => {
     setValues({ ...values, [event.target.name]: event.target.value });
   };
@@ -20,24 +22,28 @@ function LoginForm(props) {
   };
 
   return (
-    <div>
+    <div className="form-div">
       <form onSubmit={onSubmit}>
-        <label htmlFor="username">Username: </label>
-        <input
-          value={values.username}
-          name="username"
-          id="username"
-          placeholder="username"
-          onChange={onChange}
-        />
-        <label htmlFor="pwd">Password:</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="password"
-          id="pwd"
-          onChange={onChange}
-        />
+        <div className="input">
+          <label htmlFor="username">Username: </label>
+          <input
+            value={values.username}
+            name="username"
+            id="username"
+            placeholder="username"
+            onChange={onChange}
+          />
+        </div>
+        <div className="input">
+          <label htmlFor="pwd">Password:</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="password"
+            id="pwd"
+            onChange={onChange}
+          />
+        </div>
         <button>Login</button>
       </form>
     </div>

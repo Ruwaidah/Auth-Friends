@@ -6,6 +6,7 @@ import { connect } from "react-redux";
 import { axiosaction, userData } from "./actions/axiosaction";
 import axios from "axios";
 import UserPage from "./components/UserPage";
+import AddFriend from "./components/AddFriend";
 
 import PrivateRoute from "./components/PrivateRoute";
 
@@ -20,7 +21,8 @@ function App(props) {
     <div className="App">
       <Switch>
         <PrivateRoute path="/protected">
-          <Route path="/protected" component={UserPage} />
+          <Route exact path="/protected" component={UserPage} />
+          <Route path="/protected/addfriend" component={AddFriend} />
         </PrivateRoute>
         <Route path="/" render={props => <LoginForm {...props} />} />
       </Switch>

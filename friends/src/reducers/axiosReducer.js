@@ -1,4 +1,4 @@
-import { LOGIN, USER_DATA } from "../actions/axiosaction";
+import { LOGIN, USER_DATA, ADD_NEW_FRIEND } from "../actions/axiosaction";
 const initiallstate = {
   data: [],
   token: "",
@@ -21,11 +21,22 @@ export const axiosReducer = (state = initiallstate, action) => {
           isloading: false,
           error: null
         };
-      }
+      } else return { ...state };
     case USER_DATA:
       return {
         ...state,
-        data: action.payload
+        data: action.payload,
+        isloading: false,
+        error: null,
+        isLoggedIn: true
+      };
+    case ADD_NEW_FRIEND:
+      return {
+        ...state,
+        data: action.payload,
+        isloading: false,
+        error: null,
+        isLoggedIn: true
       };
 
     default:

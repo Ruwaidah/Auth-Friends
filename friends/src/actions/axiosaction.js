@@ -3,6 +3,7 @@ import { axiosWithAuth } from "../components/axiosWithAuth";
 
 export const LOGIN = "LOGIN";
 export const USER_DATA = "USER_DATA";
+export const ADD_NEW_FRIEND = "ADD_NEW_FRIEND";
 
 export const axiosaction = values => dispatch => {
   axios
@@ -15,4 +16,12 @@ export const userData = () => dispatch => {
   authAxios
     .get("http://localhost:5000/api/friends")
     .then(respo => dispatch({ type: USER_DATA, payload: respo.data }));
+};
+
+export const addNewFriend = values => dispatch => {
+  console.log(values);
+  const authAxios = axiosWithAuth();
+  authAxios
+    .post("http://localhost:5000/api/friends", values)
+    .then(respo => dispatch({ type: ADD_NEW_FRIEND, payload: respo.data }));
 };
