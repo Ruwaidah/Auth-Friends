@@ -1,21 +1,19 @@
 import React, { useEffect } from "react";
-import logo from "./logo.svg";
 import LoginForm from "./components/LoginForm";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import { axiosaction, userData } from "./actions/axiosaction";
-import axios from "axios";
 import UserPage from "./components/UserPage";
 import AddFriend from "./components/AddFriend";
+import FriendPage from "./components/FriendPage";
 
 import PrivateRoute from "./components/PrivateRoute";
 
 import "./App.css";
 
 function App(props) {
-  // sessionStorage.clear();
+  sessionStorage.clear();
   useEffect(() => {}, [props]);
-  console.log(props);
 
   return (
     <div className="App">
@@ -23,6 +21,10 @@ function App(props) {
         <PrivateRoute path="/protected">
           <Route exact path="/protected" component={UserPage} />
           <Route path="/protected/addfriend" component={AddFriend} />
+          <Route
+            path="/protected/friends/:id"
+            render={props => <FriendPage {...props} />}
+          />
         </PrivateRoute>
         <Route path="/" render={props => <LoginForm {...props} />} />
       </Switch>

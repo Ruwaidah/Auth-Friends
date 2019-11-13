@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { axiosaction } from "../actions/axiosaction";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 
 function LoginForm(props) {
-  console.log(props);
   const [values, setValues] = useState({
     username: "",
     password: ""

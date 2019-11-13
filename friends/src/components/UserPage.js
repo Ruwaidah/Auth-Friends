@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { userData } from "../actions/axiosaction";
 
 function UserPage(props) {
+  console.log(props);
   useEffect(() => {
     props.userData();
   }, []);
@@ -14,7 +15,11 @@ function UserPage(props) {
       <Link to="/protected/addfriend">add new friend</Link>
       <div className="friend-list">
         {props.data.map(item => (
-          <div key={item.id} className="friend">
+          <Link
+            key={item.id}
+            className="friend"
+            to={`/protected/friends/${item.id}`}
+          >
             <h1>{item.name}</h1>
             <div className="friend-info">
               <h5>Age:</h5>
@@ -24,7 +29,7 @@ function UserPage(props) {
               <h5>Email:</h5>
               <p>{item.email}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

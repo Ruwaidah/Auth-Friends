@@ -56,6 +56,7 @@
   font-size: 20px;
   border: none;
   border-radius: 5px;
+  color: white;
 }
 
 .input label {
@@ -134,4 +135,26 @@ form button {
   text-align: start;
   width: 70%;
   font-size: 20px;
+}
+
+/* friend-page */
+
+.friend-page h1 {
+  background: rgb(110, 65, 49);
+}
+.friend-page {
+  max-width: 400px;
+  margin: 0 auto;
+  background: rgb(110, 65, 49);
+}
+
+.friend-page button {
+  font-size: 20px;
+  color: antiquewhite;
+  border: none;
+  background: rgb(110, 65, 49);
+}
+
+.friend-page button:hover {
+  color: white;
 }
